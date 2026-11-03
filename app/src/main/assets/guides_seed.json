@@ -1,0 +1,23 @@
+{
+  "_note": "Verify every step against current platform menus before release (FR-GUIDE-08). Fix the Instagram recovery email against Instagram's official help page.",
+  "platforms": [
+    {
+      "id": "telegram", "name": "Telegram",
+      "sections": [
+        {"type": "PROTECT", "steps": [
+          {"title": "Enable Two-Step Verification", "body": "Settings → Privacy and Security → Two-Step Verification. Set a cloud password.", "verified_on": ""},
+          {"title": "Review login methods", "body": "Check QR login use and your Devices list regularly.", "verified_on": ""}
+        ]},
+        {"type": "WARNING_SIGNS", "steps": [
+          {"title": "Unknown devices", "body": "A device in your Devices list that you do not recognize.", "verified_on": ""}
+        ]},
+        {"type": "RECOVER", "steps": [
+          {"title": "Terminate other sessions", "body": "Settings → Devices → Terminate all other sessions. Then escalate via telegram.org.", "verified_on": ""}
+        ]}
+      ]
+    },
+    {"id": "whatsapp", "name": "WhatsApp", "sections": []},
+    {"id": "facebook", "name": "Facebook", "sections": []},
+    {"id": "instagram", "name": "Instagram", "sections": []}
+  ]
+}

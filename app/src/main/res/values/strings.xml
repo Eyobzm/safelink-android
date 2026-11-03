@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SafeLink</string>
+    <string name="checking_link">Checking Link…</string>
+    <string name="verified_safe">Verified Safe</string>
+    <string name="return_to_safety">Return to Safety</string>
+    <string name="proceed_manual">Proceed Manual</string>
+    <string name="exit_action">Exit</string>
+
+    <!-- FR-MSG-01: localizable messages (SRS 4.6). Amharic: add values-am/strings.xml -->
+    <string name="msg_safe">Verified Safe</string>
+    <string name="msg_suspicious_generic">Caution: We could not fully verify this link. Proceed only if you trust the sender.</string>
+    <string name="msg_suspicious_redirect">Warning: This link uses hidden redirect tracks to bounce through multiple web destinations before loading. This is common behavior used to mask bad destinations.</string>
+    <string name="msg_suspicious_lookalike">Caution: This link uses character arrangements that closely copy trusted brand domains, or it is currently marked as an unverified security risk.</string>
+    <string name="msg_dangerous_hijack">Access Blocked: This link has been isolated as a critical account takeover attempt. It is designed to steal session parameters and insert an unknown third-party device to control your account.</string>
+    <string name="msg_dangerous_delete">Access Blocked: Security rules have intercepted an unauthorized deletion script. Proceeding would allow an external party to wipe your uploaded videos, media, or chat records without your willingness.</string>
+</resources>

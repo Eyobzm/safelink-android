@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.SafeLink" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.SafeLink.Overlay" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>
