@@ -39,7 +39,7 @@ object AppModule {
 
     @Provides @Singleton
     fun api(client: OkHttpClient): SafeLinkApi = Retrofit.Builder()
-        .baseUrl(BuildConfig.API_BASE_URL)
+        .baseUrl(BuildConfig.API_BASE_URL.let { if (it.endsWith("/")) it else "$it/" })
         .client(client)
         .addConverterFactory(GsonConverterFactory.create())
         .build()

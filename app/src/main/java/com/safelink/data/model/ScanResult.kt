@@ -12,5 +12,7 @@ data class ScanResult(
 sealed interface ScanUiState {
     data object Idle : ScanUiState
     data object Loading : ScanUiState
+    /** User paused protection. Forward the link; this is not a SAFE verdict. */
+    data object Bypassed : ScanUiState
     data class Done(val result: ScanResult) : ScanUiState
 }

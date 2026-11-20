@@ -3,5 +3,6 @@
 local.properties
 .idea/
 build/
+app/schemas/
 *.jks
 *.keystore

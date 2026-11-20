@@ -1,23 +1,228 @@
 {
-  "_note": "Verify every step against current platform menus before release (FR-GUIDE-08). Fix the Instagram recovery email against Instagram's official help page.",
   "platforms": [
     {
-      "id": "telegram", "name": "Telegram",
+      "id": "telegram",
+      "name": "Telegram",
       "sections": [
-        {"type": "PROTECT", "steps": [
-          {"title": "Enable Two-Step Verification", "body": "Settings → Privacy and Security → Two-Step Verification. Set a cloud password.", "verified_on": ""},
-          {"title": "Review login methods", "body": "Check QR login use and your Devices list regularly.", "verified_on": ""}
-        ]},
-        {"type": "WARNING_SIGNS", "steps": [
-          {"title": "Unknown devices", "body": "A device in your Devices list that you do not recognize.", "verified_on": ""}
-        ]},
-        {"type": "RECOVER", "steps": [
-          {"title": "Terminate other sessions", "body": "Settings → Devices → Terminate all other sessions. Then escalate via telegram.org.", "verified_on": ""}
-        ]}
+        {
+          "type": "PROTECT",
+          "steps": [
+            {
+              "title": "Turn on a cloud password",
+              "body": "Open Settings, then Privacy and Security, then Two-Step Verification. Set a cloud password and a recovery email you control. A code sent by SMS is not enough if someone gets your SIM."
+            },
+            {
+              "title": "Treat QR login as a key",
+              "body": "A QR code that logs a device into Telegram is the same as handing over the account. Only scan a code on a screen you are looking at. Never scan a code sent to you in a chat."
+            },
+            {
+              "title": "Review the Devices list",
+              "body": "Open Settings, then Devices. Every phone, desktop, and browser session is listed there. If you do not recognize one, it does not belong."
+            }
+          ]
+        },
+        {
+          "type": "WARNING_SIGNS",
+          "steps": [
+            {
+              "title": "A device you do not recognize",
+              "body": "Settings, then Devices, shows an active session you did not start. That is the strongest sign someone else is in the account."
+            },
+            {
+              "title": "A login code you did not request",
+              "body": "Someone is trying to sign in. Do not read the code aloud or type it into a website. Telegram staff will not ask for it."
+            },
+            {
+              "title": "Secret chats or contacts change without you",
+              "body": "Chats disappear, new sessions appear, or people say they got messages you did not send."
+            }
+          ]
+        },
+        {
+          "type": "RECOVER",
+          "steps": [
+            {
+              "title": "End every other session",
+              "body": "On a device you still control, open Settings, then Devices, then Terminate all other sessions. Then change the cloud password."
+            },
+            {
+              "title": "Use Telegram’s own help, not a stranger",
+              "body": "If you are locked out, use the recovery email you set, or the official support flow on telegram.org. Ignore people who message you offering to restore the account."
+            }
+          ]
+        }
       ]
     },
-    {"id": "whatsapp", "name": "WhatsApp", "sections": []},
-    {"id": "facebook", "name": "Facebook", "sections": []},
-    {"id": "instagram", "name": "Instagram", "sections": []}
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "sections": [
+        {
+          "type": "PROTECT",
+          "steps": [
+            {
+              "title": "Turn on the two-step PIN",
+              "body": "Open Settings, then Account, then Two-step verification. Set a PIN and a recovery email. This stops someone who has your SIM from registering your number on their phone."
+            },
+            {
+              "title": "Add a passkey if WhatsApp offers one",
+              "body": "If you see passkeys under Account, add one. It ties login to this device’s lock screen instead of a code that can be forwarded."
+            },
+            {
+              "title": "Check linked devices",
+              "body": "Open Settings, then Linked devices. WhatsApp Web and Desktop sessions appear here. Log out anything you did not link yourself."
+            }
+          ]
+        },
+        {
+          "type": "WARNING_SIGNS",
+          "steps": [
+            {
+              "title": "A linked device you did not add",
+              "body": "A browser or desktop session in Linked devices that you do not remember connecting."
+            },
+            {
+              "title": "Security code changed",
+              "body": "WhatsApp tells you when a contact’s security code changes. Confirm it with that person on another channel before you send them anything sensitive."
+            },
+            {
+              "title": "Friends receive spam from you",
+              "body": "Messages you did not write, or a notice that your number was registered on another phone."
+            }
+          ]
+        },
+        {
+          "type": "RECOVER",
+          "steps": [
+            {
+              "title": "Log out unknown devices",
+              "body": "If you still have the phone, open Linked devices and log out every session you do not recognize."
+            },
+            {
+              "title": "Register the number on your own phone",
+              "body": "If someone else registered your number, install WhatsApp on your phone and verify the same number. That signs the other phone out. Use the two-step PIN if you set one."
+            },
+            {
+              "title": "Reset the PIN only inside WhatsApp",
+              "body": "The PIN reset email is sent to the address you saved in Two-step verification. Do not follow a reset link that arrived from a chat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "sections": [
+        {
+          "type": "PROTECT",
+          "steps": [
+            {
+              "title": "Use an authenticator app, not only SMS",
+              "body": "Open Accounts Center, then Password and security, then Two-factor authentication. Choose an authentication app. SMS codes can be stolen with a SIM swap."
+            },
+            {
+              "title": "Turn on login alerts",
+              "body": "In Accounts Center, under Password and security, turn on alerts for logins from unrecognized devices. Read them. A login you did not do means the password is no longer yours alone."
+            },
+            {
+              "title": "Remove apps you do not use",
+              "body": "In Accounts Center, open Apps and websites. Remove anything you do not recognize. A malicious app can post, read messages, or keep a session alive."
+            }
+          ]
+        },
+        {
+          "type": "WARNING_SIGNS",
+          "steps": [
+            {
+              "title": "Settings you did not change",
+              "body": "Email, phone number, or password changed, and you did not do it. Check the login alerts and the email inbox for the account."
+            },
+            {
+              "title": "Ad charges you do not recognize",
+              "body": "A payment method was added or ads were billed to you. That is a common sign the account is being used to run ads."
+            },
+            {
+              "title": "Videos or the page disappeared",
+              "body": "Uploaded video, a Page, or posts vanish without you deleting them. Treat links that offered to “confirm” or “remove” content as hostile."
+            }
+          ]
+        },
+        {
+          "type": "RECOVER",
+          "steps": [
+            {
+              "title": "Use Facebook’s recovery page",
+              "body": "From a browser you trust, open facebook.com/hacked or the recovery flow in Accounts Center. Start there. Do not pay a third party who says they can restore the account."
+            },
+            {
+              "title": "Log out of other sessions",
+              "body": "After you get back in, open Password and security and log out of all other sessions. Then change the password and review two-factor methods."
+            },
+            {
+              "title": "Check where recovery email goes",
+              "body": "If the email or phone on the account was changed, use the “no longer have access” path on the recovery page. The old address may still be able to prove it is you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "sections": [
+        {
+          "type": "PROTECT",
+          "steps": [
+            {
+              "title": "Run Security Checkup",
+              "body": "Open Settings, then Accounts Center, then Password and security, then Security Checkup. Finish every item it lists, including password and login activity."
+            },
+            {
+              "title": "Turn on an authenticator app",
+              "body": "In Accounts Center, under Password and security, then Two-factor authentication, add an authentication app. Prefer that over text messages."
+            },
+            {
+              "title": "Look at login activity",
+              "body": "In the same Password and security section, open Where you’re logged in. Remove locations and devices you do not recognize."
+            }
+          ]
+        },
+        {
+          "type": "WARNING_SIGNS",
+          "steps": [
+            {
+              "title": "DMs you did not send",
+              "body": "Friends receive spam, phishing links, or “is this you?” messages from your account. Assume the session is shared until you log other devices out."
+            },
+            {
+              "title": "The bio link changed",
+              "body": "The link in your bio, your email, or your phone number changed without you. That is how a takeover is used to send people somewhere else."
+            },
+            {
+              "title": "A password reset you did not start",
+              "body": "Emails about a reset or a new login. Open Instagram yourself. Do not tap the button in the email if you were not expecting it."
+            }
+          ]
+        },
+        {
+          "type": "RECOVER",
+          "steps": [
+            {
+              "title": "Use the in-app recovery screen",
+              "body": "On the login screen choose Get help logging in, or open Accounts Center recovery from a device that is still signed in. Follow only screens that Instagram itself shows."
+            },
+            {
+              "title": "Video selfie is an Instagram screen, not a link",
+              "body": "Instagram sometimes asks you to record a short video of your face to prove it is you. Do that only inside the Instagram app or on instagram.com while you are on the recovery flow. Never upload that video to a link someone sent you."
+            },
+            {
+              "title": "Ignore rescue offers in your DMs",
+              "body": "After you regain access, remove unknown logins, change the password, and turn two-factor authentication back on. People who message you offering to restore the account are not Instagram support."
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

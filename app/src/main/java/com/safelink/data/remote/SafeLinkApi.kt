@@ -1,5 +1,6 @@
 package com.safelink.data.remote
 
+import com.google.gson.annotations.SerializedName
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -24,10 +25,14 @@ data class ScanResponseDto(
 
 data class ReportDto(val url: String, val report_type: String, val note: String?)
 
-data class RuleDeltaDto(val version: Int, val package_: String?, val signature: String?)
+data class RuleDeltaDto(
+    val version: Int = 0,
+    @SerializedName("package") val packageB64: String? = null,
+    val signature: String? = null,
+)
 
 interface SafeLinkApi {
     @POST("v1/scan") suspend fun scan(@Body body: ScanRequestDto): ScanResponseDto
     @POST("v1/report") suspend fun report(@Body body: ReportDto)
-    @GET("v1/rules/delta") suspend fun rulesDelta(@Query("since") since: Int): Map<String, Any?>
+    @GET("v1/rules/delta") suspend fun rulesDelta(@Query("since") since: Int): RuleDeltaDto
 }
